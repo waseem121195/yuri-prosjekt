@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Brand colors */
+  --ink: #0E0F12;
+  --bone: #F6F4EF;
+  --slate: #1F2A37;
+  --brass: #B08A55;
+  --glass-blue: #7FB3C9;
+  --signal: #C5443B;
+  --mist: #E7E3DA;
+
+  /* shadcn/ui overrides */
+  --background: var(--bone);
+  --foreground: var(--ink);
+  --card: #FFFFFF;
+  --card-foreground: var(--ink);
+  --popover: #FFFFFF;
+  --popover-foreground: var(--ink);
+  --primary: var(--ink);
+  --primary-foreground: var(--bone);
+  --secondary: var(--mist);
+  --secondary-foreground: var(--ink);
+  --muted: var(--mist);
+  --muted-foreground: #6B7280;
+  --accent: var(--brass);
+  --accent-foreground: #FFFFFF;
+  --destructive: var(--signal);
+  --destructive-foreground: #FFFFFF;
+  --border: var(--mist);
+  --input: var(--mist);
+  --ring: var(--brass);
+  --radius: 0.75rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 0 rgba(0,0,0,0.04), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --shadow-md: 0 1px 0 rgba(0,0,0,0.04), 0 8px 24px -12px rgba(0,0,0,0.12);
+  --shadow-lg: 0 1px 0 rgba(0,0,0,0.04), 0 16px 40px -8px rgba(0,0,0,0.16);
+  --shadow-xl: 0 1px 0 rgba(0,0,0,0.04), 0 24px 60px -8px rgba(0,0,0,0.22);
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+}
+
+@layer base {
+  * { border-color: var(--mist); }
+  body {
+    background-color: var(--bone);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer base {
+  .scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+}
+
+@layer utilities {
+  .pt-header {
+    padding-top: 56px;
+  }
+  @media (min-width: 1024px) {
+    .pt-header {
+      padding-top: 224px;
+    }
+  }
+
+  .font-display { font-family: 'Fraunces', Georgia, serif; }
+  .font-ui { font-family: 'Inter', sans-serif; }
+  .text-ink { color: var(--ink); }
+  .text-brass { color: var(--brass); }
+  .text-glass { color: var(--glass-blue); }
+  .text-signal { color: var(--signal); }
+  .bg-ink { background-color: var(--ink); }
+  .bg-bone { background-color: var(--bone); }
+  .bg-brass { background-color: var(--brass); }
+  .bg-slate-custom { background-color: var(--slate); }
+  .bg-mist { background-color: var(--mist); }
+  .border-mist { border-color: var(--mist); }
+  .border-brass { border-color: var(--brass); }
+}
